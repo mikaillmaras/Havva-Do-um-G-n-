@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Doğum Günü Sürprizi!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Müzik Kontrol Butonu -->
+    <div class="music-control">
+        <button id="musicToggle">🔊 Müzik Aç</button>
+    </div>
+
+    <!-- 1. Aşama: Tahmin Ekranı -->
+    <div id="stage1" class="screen active">
+        <div class="question-marks">?</div>
+        <div class="question-marks" style="left: 70%; top: 20%; animation-delay: 0.3s;">?</div>
+        <div class="question-marks" style="right: 70%; top: 80%; animation-delay: 0.6s;">?</div>
+        <div class="question-marks" style="left: 30%; bottom: 20%; animation-delay: 0.9s;">?</div>
+        <div class="question-marks" style="right: 30%; top: 30%; animation-delay: 1.2s;">?</div>
+        
+        <h1 class="title-text">Bilin bakalım bugün kimin doğum günü?</h1>
+        <div class="date-text">17 Temmuz</div>
+        <p class="instruction-text">Ben biliyorum ama sadece sormak istiyorum 😊</p>
+        <p class="tap-text">(Öğrenmek için yazıya dokunun)</p>
+    </div>
+
+    <!-- 2. Aşama: Thomas Ekranı -->
+    <div id="stage2" class="screen">
+        <div class="content-container">
+            <h2 class="message-text">Thomas'ın doğum günü olmadığı kesin!</h2>
+            <div class="photo-container">
+                <img src="https://www.kindpng.com/picc/m/35-353566_transparent-train-clipart-printable-thomas-train-face-hd.png" alt="Thomas" class="main-photo clickable">
+            </div>
+            <p class="hint-text">Gerçekten kimin doğum günü olduğunu öğrenmek istiyorsanız Thomas'a dokunun!</p>
+        </div>
+    </div>
+
+    <!-- 3. Aşama: Ay Yüzlü Hanım Ekranı -->
+    <div id="stage3" class="screen">
+        <div class="content-container">
+            <h2 class="message-text">Ay yüzlü bir hanımefendinin doğum günü!</h2>
+            <div class="photo-container">
+                <img src="https://emoji-copy.com/imaj/2048/1F31D.webp" alt="Ay Yüzlü Hanım" class="main-photo clickable">
+            </div>
+            <p class="hint-text">Hala kim olduğunu bulamadıysanız ay yüzlü kadına bir kere dokunun ve ben size söyleyeyim!</p>
+        </div>
+    </div>
+
+    <!-- 4. Aşama: Final Ekranı -->
+    <div id="stage4" class="screen">
+        <div class="content-container">
+            <div class="cake-container">
+                <img src="https://cdn.pixabay.com/photo/2017/05/04/21/23/cupcakes-2285209_640.jpg" alt="Doğum Günü Pastası" class="cake-photo">
+            </div>
+            <h1 class="celebration-text">Doğum gününüz kutlu olsun Havva Hanım!</h1>
+            <h2 class="blessing-text">Rabbim size uzun ömürler versin</h2>
+            <p class="elite-text">(Ofun en güzel ve elit kızı)</p>
+        </div>
+        
+        <div class="floating-elements">
+            <!-- Emojiler JavaScript ile eklenecek -->
+        </div>
+    </div>
+    
+    <audio id="bgMusic" loop>
+        <source src="https://youtu.be/mXpXqJNa5tY?si=k4fLl4GBqlyy0kZn" type="audio/mpeg">
+    </audio>
+    
+    <canvas id="confetti"></canvas>
+    
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
